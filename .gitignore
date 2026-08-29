@@ -1,0 +1,9 @@
+crop-doctor-backend/.env
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env
+*.env
