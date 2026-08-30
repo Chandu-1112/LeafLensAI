@@ -1,90 +1,148 @@
 # 🌱 LeafLensAI
 
-**AI-powered crop disease detection and agricultural assistance application.**
+### AI-Powered Crop Disease Detection & Agricultural Assistant
 
-LeafLensAI helps farmers identify crop diseases using AI and provides useful agricultural guidance through an easy-to-use mobile application.
+**LeafLensAI helps farmers identify crop diseases using AI and get agricultural guidance through a simple mobile application.**
 
 ---
 
-## 🚀 Project Demo
+## 🚀 Live Demo
 
-### Live / Deployed Application
+📱 **[Download / Test Mobile App](https://expo.dev/accounts/chandu-1112/projects/mobile/builds/09df50cf-f00f-49bf-bba9-298999a7c5e1)**
 
-**Backend link:** `https://crop-doctor-backend-sl9n.onrender.com/`
-**Application download Link:** `https://expo.dev/accounts/chandu-1112/projects/mobile/builds/09df50cf-f00f-49bf-bba9-298999a7c5e1`
+🔗 **[Live Backend API](https://crop-doctor-backend-sl9n.onrender.com/)**
 
-## 📱 Screenshots
 
-Screenshots of the application will be added here.
+---
 
-### Home Screen
+## 📱 Application Screenshots
 
-![Home Screen](screenshots/home.png)
+| 🏠 Home                       | 📷 Disease Detection                    |
+| ----------------------------- | --------------------------------------- |
+| ![Home](screenshots/home.png) | ![Diagnosis](screenshots/diagnosis.png) |
 
-### Crop Disease Diagnosis
+| 🔍 Diagnosis Result               | 🤖 AI Assistant                         |
+| --------------------------------- | --------------------------------------- |
+| ![Result](screenshots/results.png) | ![Assistant](screenshots/assisstant.png) |
 
-![Diagnosis Screen](screenshots/diagnosis.png)
+---
 
-### Diagnosis Result
+## 🚨 Problem
 
-![Result Screen](screenshots/result.png)
+Farmers may face difficulty in:
 
-### AI Assistant
+* Identifying crop diseases early
+* Understanding disease symptoms
+* Accessing agricultural experts
+* Knowing what action to take
 
-![AI Assistant](screenshots/assistant.png)
+This can lead to **delayed treatment and potential crop losses**.
+
+---
+
+## 💡 Solution
+
+LeafLensAI provides an AI-powered mobile solution where farmers can:
+
+**📷 Upload leaf image → 🤖 AI analysis → 🔍 Disease diagnosis → 💡 Agricultural guidance**
+
+The application also provides an **AI agricultural assistant** for agriculture-related questions.
 
 ---
 
 ## ✨ Key Features
 
-* 🌿 AI-powered crop disease detection
-* 📷 Crop/leaf image-based diagnosis
-* 🤖 AI agricultural assistant
-* 📋 Disease diagnosis and recommendations
-* 📜 Diagnosis/history tracking
-* 👤 User profile
-* 📱 Mobile application interface
-* ⚡ FastAPI-based backend
-* 🗄️ Database-backed application
+* 🌿 **AI Crop Disease Detection**
+* 📷 **Image-Based Diagnosis**
+* 🤖 **AI Agricultural Assistant**
+* 📋 **Disease Information & Recommendations**
+* 📜 **Diagnosis History**
+* 👤 **User Profile**
+* 📱 **Mobile-First Experience**
+* ⚡ **FastAPI REST Backend**
+
+---
+
+## 🔄 How It Works
+
+```text
+👨‍🌾 Farmer
+    ↓
+📱 LeafLensAI Mobile App
+    ↓
+📷 Upload / Capture Leaf
+    ↓
+⚡ FastAPI Backend
+    ↓
+🤖 AI Analysis
+    ↓
+🔍 Disease Diagnosis
+    ↓
+📋 Result + Recommendations
+    ↓
+🌱 Farmer Takes Action
+```
+
+---
+
+## 🏗️ Architecture
+
+```text
+          📱 React Native + Expo
+                    │
+                    ▼
+             ⚡ FastAPI API
+                    │
+          ┌─────────┴─────────┐
+          ▼                   ▼
+     🤖 AI Services       🗄️ Gemini api 
+          │                   │
+          └─────────┬─────────┘
+                    ▼
+             📋 Diagnosis
+                    │
+                    ▼
+              📱 Mobile App
+```
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Backend
-
-* Python
-* FastAPI
-* SQLAlchemy
-* MySQL / PostgreSQL
-* REST APIs
-* AI/ML services
-
-### Mobile
+### 📱 Frontend
 
 * React Native
 * Expo
 * TypeScript
 
-### Tools
+### ⚙️ Backend
+
+* Python
+* FastAPI
+* REST APIs
+
+
+### 🤖 AI
+* Gemini API key
+* AI-based crop disease analysis
+* AI agricultural assistance
+
+### 🔧 Tools
 
 * Git
 * GitHub
-* REST API
 * JSON
+* REST API
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```text
 LeafLensAI/
 │
 ├── crop-doctor-backend/
 │   ├── app/
-│   │   ├── main.py
-│   │   ├── services/
-│   │   └── ...
 │   ├── requirements.txt
 │   └── ...
 │
@@ -92,8 +150,7 @@ LeafLensAI/
 │   ├── app/
 │   ├── components/
 │   ├── assets/
-│   ├── package.json
-│   └── ...
+│   └── package.json
 │
 ├── screenshots/
 │   ├── home.png
@@ -107,175 +164,109 @@ LeafLensAI/
 
 ---
 
-# ⚙️ How to Run the Project
+## ⚙️ Run Locally
 
-## 1. Clone the Repository
+### 1. Clone
 
 ```bash
 git clone https://github.com/Chandu-1112/LeafLensAI.git
 cd LeafLensAI
 ```
 
----
-
-# 🔹 Backend Setup
-
-Go to the backend directory:
+### 2. Backend
 
 ```bash
 cd crop-doctor-backend
-```
 
-### Create a Virtual Environment
-
-Windows:
-
-```powershell
 python -m venv venv
-```
-
-Activate it:
-
-```powershell
 venv\Scripts\activate
-```
 
-### Install Dependencies
-
-```powershell
 pip install -r requirements.txt
 ```
 
-### Environment Variables
-
-Create a `.env` file inside:
-
-```text
-crop-doctor-backend/
-```
-
-Example:
+Create `.env`:
 
 ```env
 GOOGLE_API_KEY=your_api_key_here
-DATABASE_URL=your_database_url_here
 ```
 
-> Do not commit your `.env` file to GitHub.
+Start backend:
 
-### Start the Backend
-
-```powershell
+```bash
 uvicorn app.main:app --reload
 ```
 
-The backend will normally be available at:
-
-```text
-http://127.0.0.1:8000
-```
-
-### API Documentation
-
-FastAPI automatically provides interactive API documentation:
+API documentation:
 
 ```text
 http://127.0.0.1:8000/docs
 ```
 
----
+### 3. Mobile App
 
-# 🔹 Mobile App Setup
+Open another terminal:
 
-Open a new terminal and go to:
-
-```powershell
+```bash
 cd crop-doctor-mobile
-```
-
-### Install Dependencies
-
-```powershell
 npm install
-```
-
-### Start the Application
-
-```powershell
 npx expo start
 ```
 
-Then use the Expo development options to run the application on a physical device, emulator, or supported platform.
+---
+
+## 🔐 Security
+
+* API keys stored in environment variables
+* `.env` excluded from Git
+* Secrets are not exposed in the mobile application
+* Database credentials are kept on the backend
 
 ---
 
-# 🔐 Environment Variables
+## 🚀 Future Scope
 
-The project requires environment-specific configuration.
-
-Example:
-
-```env
-GOOGLE_API_KEY=your_api_key_here
-
-
-**Never share real API keys publicly.**
+* 🌾 More crops and diseases
+* 🌐 Regional language support
+* 🗣️ Voice-based agricultural assistant
+* 🌦️ Weather-based recommendations
+* 📡 IoT crop monitoring
+* 🧠 Disease severity detection
+* 📍 Location-aware agricultural guidance
+* 📊 Crop health analytics
 
 ---
 
-# 🧩 Application Flow
+## 🏆 Hackathon MVP
+
+### **Our Core Demonstration**
 
 ```text
-User
-  │
-  ▼
-Mobile Application
-  │
-  ▼
-FastAPI Backend
-  │
-  ├──► AI / Disease Detection Service
-  │
-  └──► Database
-  │
-  ▼
-Diagnosis / Recommendation
-  │
-  ▼
-Mobile Application
+📷 Leaf Image
+     ↓
+🤖 AI Detection
+     ↓
+🔍 Disease Identified
+     ↓
+💡 Recommended Action
+     ↓
+🤖 Ask AI Assistant
 ```
 
----
-
-# 🎯 Hackathon Highlights
-
-LeafLensAI focuses on using AI technology to make crop disease identification and agricultural assistance more accessible through a mobile-first application.
-
-The system combines:
-
-* AI-powered analysis
-* REST APIs
-* Mobile application development
-* Database integration
-* Agricultural assistance
-
-into a single application.
+**LeafLensAI combines AI + Mobile + Backend + Database into one practical agricultural solution.**
 
 ---
 
-# 👥 Team
+## 👥 Team — LeafLens AI
 
-**Team Name:** `LeafLens AI`
-
-| Member               |     Role      |
-| -------------------- | ------------  |
-| `Chandu Kumar Reddy` | `Team leader` |
-| `Dhanavardhan Reddy` | `Team member` |
-| `Ajay Kumar`         | `Team member` |
-| `Swarna Kumar`       | `Team member` |
+| Member                 | Role        |
+| ---------------------- | ----------- |
+| **Chandu Kumar Reddy** | Team Leader |
+| **Dhanavardhan Reddy** | Team Member |
+| **Ajay Kumar**         | Team Member |
+| **Swarna Kumar**       | Team Member |
 
 ---
 
-# 📄 License
+## 🌱 LeafLensAI
 
-This project was developed for hackathon/educational purposes.
+### **See the disease. Understand the problem. Take action.**
